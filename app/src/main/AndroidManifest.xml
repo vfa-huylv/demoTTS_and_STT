@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoTSS_STT">
         <activity
+            android:name=".ParseJsonHtmlToObject"
+            android:exported="false" />
+        <activity
             android:name=".STTActivity"
             android:exported="false" />
         <activity

@@ -2,20 +2,25 @@ package com.example.demotss_stt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
+import java.util.HashMap;
 import java.util.Locale;
 
 public class TTSActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
 
     EditText etContent;
-    Button btnSpeak;
+    Button btnSpeak, btnSelectLanguage, btnBack;
     TextToSpeech tts;
+    RadioGroup rdLanguageGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,9 @@ public class TTSActivity extends AppCompatActivity implements TextToSpeech.OnIni
 
         etContent = findViewById(R.id.etContent);
         btnSpeak = findViewById(R.id.btnSpeak);
+        rdLanguageGroup = findViewById(R.id.radioGroup);
+        btnSelectLanguage = findViewById(R.id.btnSelect);
+        btnBack = findViewById(R.id.btnBack);
 
         tts = new TextToSpeech(this, this);
 
@@ -31,6 +39,33 @@ public class TTSActivity extends AppCompatActivity implements TextToSpeech.OnIni
             @Override
             public void onClick(View view) {
                 speakOut();
+            }
+        });
+
+        btnSelectLanguage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int selectedId = rdLanguageGroup.getCheckedRadioButtonId();
+                RadioButton selectedButton = (RadioButton) findViewById(selectedId);
+
+                String lang = selectedButton.getText().toString();
+
+                switch (lang) {
+                    case "US":
+                        tts.setLanguage(Locale.US);
+                        break;
+                    case "JP":
+                        tts.setLanguage(Locale.JAPANESE);
+                        break;
+                }
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TTSActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -61,6 +96,8 @@ public class TTSActivity extends AppCompatActivity implements TextToSpeech.OnIni
 
     public void speakOut() {
         String content = etContent.getText().toString();
-        tts.speak(content, TextToSpeech.QUEUE_FLUSH, null, null);
+        Bundle params = new Bundle();
+        params.putFloat(TextToSpeech.Engine.KEY_PARAM_VOLUME, 1.0f);
+        tts.speak(content, TextToSpeech.QUEUE_FLUSH, params, null);
     }
 }

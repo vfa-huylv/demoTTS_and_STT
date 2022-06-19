@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">demoTSS_STT</string>
+
+    <string name="string_test_1">お知りになりたいことが違うようでしたら、ご要望などこちらにいただければと思います。</string>
+    <string name="string_test_2">ぜひよろしくお願いします！\u003Cbr\u003E</string>
+    <string name="string_test_3">\u003Ca href=\"https://docs.google.com/forms/d/e/1FAIpQLSfSAjU4PdfJlhIxHppawHdRpozppvb1N2cPxVFv2JHa8TlhZQ/viewform?entry.390021602=1be70a1c-6324-4d16-8eab-5a1b77d81dbd\" target=\"_blank\"\u003E要望やコメントを入力する\u003C/a\u003E\u003Cp\u003E詳細な問い合わせをご希望の方は\u003Ca\u003Einfo@ifocus-network.jp\u003C/a\u003Eまでメールをお送りください。</string>
+    <string name="string_test_4">\u003C/p\u003E</string>
+
+    <string name="string_test_5">申し訳ございません。</string>
+    <string name="string_test_6">\u003Cbr\u003E</string>
+    <string name="string_test_7">ご質問いただいた件についてはまだ勉強しておらず回答が見つかりませんでした。</string>
+    <string name="string_test_8">\u003Cbr\u003E</string>
+    <string name="string_test_9">こちらのことについてはお答えできると思います。</string>
+    <string name="string_test_10">\u003Cbr\u003E</string>
+
+
+    <string name="string_button_8">\u003E</string>
+    <string name="string_button_9">\u003Cbutton label=\"会社概要\" text=\"会社概要\" type=\"5\"\u003EClick Me!\u003C/button\u003E</string>
+
+    <string name="checkbox">\u003Cinput type=\"checkbox\"\u003E３．３０度ぐらいクラブフェースを開いてからグリップを持ち、素振りをする。</string>
+
+    <string name="button">{\"button\":[{\"label\":\"はい\", \"text\":\"@@yes\", \"type\":1},{\"label\":\"いいえ\", \"text\":\"@@no\", \"type\":2},{\"label\":\"別の質問\", \"text\":\"reset\", \"type\":5}]}</string>
+
+    <string name="image_button">\u003Ca href=\"https://s3.amazonaws.com/enoki-adviser/images/インパクトイメージ.png\" target=\"_blank\"\u003E\u003Cimg src=\"https://s3.amazonaws.com/enoki-adviser/images/インパクトイメージ.png\" style=\"max-width:80%;\"\u003E\u003C/a\u003E\u003Cbr/\u003E</string>
 </resources>

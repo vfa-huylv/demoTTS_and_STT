@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnTTS, btnSTT;
+    Button btnTTS, btnSTT, btnParse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnTTS = findViewById(R.id.btnTTS);
         btnSTT = findViewById(R.id.btnSTT);
+        btnParse = findViewById(R.id.btnParse);
 
         btnTTS.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, STTActivity.class);
+                startActivity(i);
+            }
+        });
+
+        btnParse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, ParseJsonHtmlToObject.class);
                 startActivity(i);
             }
         });

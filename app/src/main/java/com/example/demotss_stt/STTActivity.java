@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -18,6 +19,7 @@ import java.util.Objects;
 public class STTActivity extends AppCompatActivity {
 
     ImageButton btnSpeak;
+    Button btnBack;
     EditText etContent;
     private static final int REQUEST_CODE_SPEECH_INPUT = 1;
 
@@ -28,6 +30,7 @@ public class STTActivity extends AppCompatActivity {
 
         btnSpeak = findViewById(R.id.btnSpeakSTT);
         etContent = findViewById(R.id.etContentSaid);
+        btnBack = findViewById(R.id.btnBack);
 
         btnSpeak.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +49,14 @@ public class STTActivity extends AppCompatActivity {
                     Toast.makeText(STTActivity.this, " " + e.getMessage(), Toast.LENGTH_SHORT)
                             .show();
                 }
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(STTActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

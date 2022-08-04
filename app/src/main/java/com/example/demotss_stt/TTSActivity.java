@@ -33,7 +33,7 @@ public class TTSActivity extends AppCompatActivity implements TextToSpeech.OnIni
         btnSelectLanguage = findViewById(R.id.btnSelect);
         btnBack = findViewById(R.id.btnBack);
 
-        tts = new TextToSpeech(this, this);
+        //tts = new TextToSpeech(this, this);
 
         btnSpeak.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,6 +98,9 @@ public class TTSActivity extends AppCompatActivity implements TextToSpeech.OnIni
         String content = etContent.getText().toString();
         Bundle params = new Bundle();
         params.putFloat(TextToSpeech.Engine.KEY_PARAM_VOLUME, 1.0f);
+        if (tts.isSpeaking()) {
+            tts.stop();
+        }
         tts.speak(content, TextToSpeech.QUEUE_FLUSH, params, null);
     }
 }

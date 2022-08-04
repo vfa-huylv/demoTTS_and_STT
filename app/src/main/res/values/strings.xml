@@ -2,7 +2,7 @@
     <string name="app_name">demoTSS_STT</string>
 
     <string name="string_test_1">お知りになりたいことが違うようでしたら、ご要望などこちらにいただければと思います。</string>
-    <string name="string_test_2">ぜひよろしくお願いします！\u003Cbr\u003E</string>
+    <string name="string_test_2">ぜひよろしくお願いします！\u003Cbr\u003Efhsjkdhfksdhfksdhk</string>
     <string name="string_test_3">\u003Ca href=\"https://docs.google.com/forms/d/e/1FAIpQLSfSAjU4PdfJlhIxHppawHdRpozppvb1N2cPxVFv2JHa8TlhZQ/viewform?entry.390021602=1be70a1c-6324-4d16-8eab-5a1b77d81dbd\" target=\"_blank\"\u003E要望やコメントを入力する\u003C/a\u003E\u003Cp\u003E詳細な問い合わせをご希望の方は\u003Ca\u003Einfo@ifocus-network.jp\u003C/a\u003Eまでメールをお送りください。</string>
     <string name="string_test_4">\u003C/p\u003E</string>
 
@@ -12,6 +12,11 @@
     <string name="string_test_8">\u003Cbr\u003E</string>
     <string name="string_test_9">こちらのことについてはお答えできると思います。</string>
     <string name="string_test_10">\u003Cbr\u003E</string>
+
+    <string name="link">Learn more about Android app development at <a href="https://learntodroid.com">LearnToDroid.com</a></string>
+    <string name="color1">Color1 <font color="pink">文字列</font></string>
+    <string name="color2">Color2 <font color="#7FFFD4">文字列</font></string>
+    <string name="color3">Color3 <span class="_cbat-color-black">文字列</span></string>
 
 
     <string name="string_button_8">\u003E</string>
